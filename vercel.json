@@ -1,0 +1,15 @@
+{
+    "version": 20.5,
+    "builds": [
+      {
+        "src": "dist/*",
+        "use": "@vercel/angular"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
