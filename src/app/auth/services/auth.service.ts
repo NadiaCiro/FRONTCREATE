@@ -27,7 +27,7 @@ export class AuthService {
 
   login( email: string|null|undefined, password: string|null|undefined ) : Observable<any> {
 
-    // const urlLogin = `${ this.baseUrl }/auth/login`;
+    // const urlLogin = `${ this.baseUrl }/api/auth/login`;
     const urlLogin = 'http://localhost:3001/api/auth/login';
     const user= { email, password };
     const body = { user};
@@ -46,6 +46,7 @@ export class AuthService {
   }
 
   register (user:User): Observable<User>{
+    // const urlRegister = `${ this.baseUrl }/api/auth/register`;
     const urlRegister = 'http://localhost:3001/api/auth/register';
     const body = { user };
     console.log("dentro del servicio aut register"+body)

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
+  // const urlLApi = `${ this.baseUrl }/api/destacados`;
   // private urlApi ='http://localhost:3001/api/destacados';
 
   constructor(private http: HttpClient) { }
