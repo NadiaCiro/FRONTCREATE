@@ -1,0 +1,66 @@
+
+<app-header></app-header>
+
+<div class="container">
+<br>
+<br>
+<br>
+<div class="image-container">
+    <img class="image" src="{{product.url}}">
+</div>
+        
+<div class="content-container">
+    <h1> {{product.title}}</h1>
+    <h4>Marca</h4>
+    <h2>$ {{product.price}}</h2>
+    <p>{{product.descrip}}</p>
+
+    <h2>Talla</h2>
+    <select name="tallas" id="tallas_">
+        <option value="xs">XS</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+        <option value="xl">XL</option>
+        <option value="xxl">XXL</option>
+    </select>
+
+<br>
+    <!-- <h2>Cantidad</h2>
+    <div>
+        <button class="botonCantidad" (click)="numero = numero - 1">-</button>
+        <span>{{ numero }}</span>
+        <button class="botonCantidad" (click)="numero = numero + 1">+</button>
+    </div> -->
+
+    <h2>Color</h2>
+    <div class="color-selector">
+        <div class="color-circle" style="background-color: #ff00ea;"></div>
+        <div class="color-circle" style="background-color: #d9ff00;"></div>
+        <div class="color-circle" style="background-color: rgb(0, 255, 115);"></div>
+    </div>
+<br>
+        <button class="boton"(click)="addToCart(product)" >Añadir al carrito</button>
+    </div>
+</div>
+
+<div class="container">
+<div class="relacionados">
+    <h1>Productos relacionados</h1>
+    <br>
+    <div class="container-image">
+        <div class="item" id="item1">
+            <h2>item 1</h2><!--Se reemplaza con la imagen-->
+        </div>
+        <div class="item" id="item2">
+            <h2>item 2</h2><!--Se reemplaza con la imagen-->
+        </div>
+        <div class="item" id="item3">
+            <h2>item 3</h2><!--Se reemplaza con la imagen-->
+        </div>
+</div>
+
+
+
+
+

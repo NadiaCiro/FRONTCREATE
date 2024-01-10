@@ -45,8 +45,9 @@
 </div>
 <div [ngClass]="{'overlaySV': errorauth, 'overlayNV': !errorauth}">
     <div class="popup">
-        <a routerLink='/' class="btn-cerrar-popup">
-            <i class='bx bx-window-close' style='color:#2d2c2c'></i>
+        <!-- routerLink='/' -->
+        <a class="btn-cerrar-popup" (click)="cambiarEstado()">
+            <i class='bx bx-x'></i>
         </a>
         <h3>Error al iniciar sesion</h3>
         <p>Tu contraseña es inválida o aun no estás registrado</p>
@@ -54,3 +55,5 @@
     </div>
 </div>
 </div>
+
+<!-- <app-footer></app-footer> -->

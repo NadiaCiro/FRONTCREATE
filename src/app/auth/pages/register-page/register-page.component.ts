@@ -12,6 +12,7 @@ import { Router } from "@angular/router";//redireccionar a página
 export class RegisterPageComponent {
   person!:FormGroup;
   authError:boolean=false;
+  authGood:boolean=false;
   authService = inject( AuthService );
 
   constructor(private fb:FormBuilder, private router: Router){//Redireccionar a página
@@ -97,10 +98,17 @@ export class RegisterPageComponent {
       this.authService.register(usuario).subscribe(success => {
           this.person.reset();  
           //Redireccionar a página
-          this.router.navigate(['/'])        
+          // this.router.navigate(['/'])
+          this.authGood=true;        
           },err =>{
             this.authError=true;
           })
     }
-  }  
+  }
+  
+  cambiarEstado(){
+    this.authError=false;
+    this.authGood=false;
+    this.person.reset();
+  }
 }

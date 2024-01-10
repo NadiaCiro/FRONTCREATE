@@ -10,8 +10,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #737171;
-  /* background-image: url(../../../../assets/moda4.jpg); */
+  background-color: rgb(144, 144, 144);
+  /* background-image: url(../../../../assets/black_background_orchids_white_flowers_flowers_plants-261735.jpg!d); */
   background-size: cover;
 }
 
@@ -69,7 +69,7 @@
   justify-content: center;
   width: 60%;
   text-align: center;
-  background-color: #555;
+  background-color: #2e2d2d;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -81,7 +81,7 @@
   font-size: 2rem;
 }
 .form-information-childs p {
-  color: #0c0c0c;
+  color: #fff;
 }
 
 .alerta {

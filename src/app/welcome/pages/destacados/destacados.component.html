@@ -1,9 +1,14 @@
-<div class="card">
+<body>
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let detalleProducto of listaProductos" class="slide card"> 
+        <img class="image" src="{{detalleProducto.url}}" alt="mensaje" (click)="productDetail(detalleProducto)"> 
+        <div class="info">
+            <h3>{{detalleProducto.title}}</h3>
+        </div> 
+        <div class="precio">
+            <span>$ {{detalleProducto.price}}</span>
+        </div>      
+    </div>
+</ngx-slick-carousel>
 
-    <img class="image" [src]="dataEntrante?.url" alt="">
-    <h3>{{dataEntrante?.title}}</h3>
-    <p>{{dataEntrante?.descrip}}</p>
-    <h6>{{dataEntrante?.price}}</h6>
-    <button class="buy">add to car</button>  
-
-</div>
+</body>

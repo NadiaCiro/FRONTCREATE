@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +8,10 @@ import { ApiService } from '../../services/api.service';
 export class HomeComponent implements OnInit{
 
   title = 'portafolio-app';
-  public listaProductos:any =[]
 
-  constructor (private apiService: ApiService){}
+  constructor (private renderer: Renderer2){}
 
   ngOnInit(): void {
-      this.llenarData();
+    this.renderer.setStyle(document.body, 'background-color', '#fff');
   }
-
-  public llenarData(){
-    this.apiService.get('http://localhost:3001/api/destacados').subscribe(data => [
-      this.listaProductos=data
-    ])
-  }
-
 }

@@ -114,12 +114,24 @@
     </div>
     <div [ngClass]="{'overlaySV': authError, 'overlayNV': !authError}">
         <div class="popup">
-            <a routerLink='/' class="btn-cerrar-popup">
-                <i class='bx bx-window-close' style='color:#2d2c2c'></i>
+            <a (click)="cambiarEstado()" class="btn-cerrar-popup">
+                <i class='bx bx-x'></i>
             </a>
             <h3>Registro inválido</h3>
             <p>Tu correo ya esta registrado en la base de datos</p>
             <button routerLink='/auth/login'>Iniciar Sesion</button>
         </div>
     </div>
+    <div [ngClass]="{'overlaySV': authGood, 'overlayNV': !authGood}">
+        <div class="popup">
+            <a (click)="cambiarEstado()" class="btn-cerrar-popup">
+                <i class='bx bx-x'></i>
+            </a>
+            <h3>Registro Exitoso!</h3>
+            <p>Bienvenido a nuestra comunidad, para empezar por favor inicia sesion</p>
+            <button routerLink='/auth/login'>Iniciar Sesion</button>
+        </div>
+    </div>
 </div>
+
+<!-- <app-footer></app-footer> -->

@@ -1,20 +1,32 @@
 <!---->
-<script src="home.js" defer></script>
+<!-- <script src="home.js" defer></script> -->
 <!---->
 
 <app-header></app-header>
 
-<video loop autoplay class="back-video">    
-    <source src="../../../../assets/videohome1.mp4" type="video/mp4">    
-</video>
-
-<h3>Lo más vendido</h3>
-<div class="body">
-    <div class="galery"> 
-        <app-destacados [dataEntrante]="detalleProducto" *ngFor="let detalleProducto of listaProductos"></app-destacados>
-    </div>
+<!-- <div class="container">
+    <video loop autoplay class="back-video">    
+        <source src="../../../../assets/videohome1.mp4" type="video/mp4">    
+    </video>
+    
+    <a routerLink="/auth/login" class="link">Productos</a>
+</div> -->
+<div class="video-container">
+    <video loop autoplay class="back-video">    
+        <source src="../../../../assets/videohome1.mp4" type="video/mp4">    
+    </video>
+    <a routerLink="/products" class="link">All Products</a>
 </div>
 
+<hr>
+<h3>Lo más vendido</h3>
+<hr>
+
+<app-destacados></app-destacados>
+
+<hr>
+
+<app-footer></app-footer>
 
 <!--Borrar-->
 <!-- <script src="admin.js" defer></script> -->
