@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ApiProductsAllService } from '../services/api-products-all.service';
+import { environment } from 'src/environments/environment';
 //import { Profile } from '../../interfaces/profile';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiProductsAllService } from '../services/api-products-all.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
+  private urlSearch =`${environment.baseUrl}`
   /*profile:Profile = {
     name_: "",
     last_name_: "",
@@ -39,7 +40,7 @@ export class ProfileComponent implements OnInit {
   }
 
   public llenarData(){
-    this.apiProductsAllService.get('http://localhost:3001/api/products').subscribe(data => [
+    this.apiProductsAllService.get(`${this.urlSearch}/api/products`).subscribe(data => [
       this.listaProductos=data
     ])
   }

@@ -32,7 +32,7 @@ export class AuthService {
 
   login( email: string|null|undefined, password: string|null|undefined ) : Observable<any> {
 
-    const urlLogin = `${ this.baseUrl }/auth/login`;
+    const urlLogin = `${this.baseUrl}/auth/login`;
     const user= { email, password };
     const body = { user};
 

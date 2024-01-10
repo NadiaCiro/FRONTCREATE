@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiProductsAllService } from '../services/api-products-all.service';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/product.interface';
 import { Router } from '@angular/router';
 
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  private urlSearch =`${environment.baseUrl}`;  
 
   public listaProductos:any =[]
 
@@ -25,11 +27,10 @@ export class ProductsComponent implements OnInit {
     this.renderer.setStyle(document.body, 'justify-content','center');
     this.renderer.setStyle(document.body, 'align-items','center'); 
     // this.renderer.setStyle(document, 'box-sizing', 'border-box');
-   
   }
 
   public llenarData(){
-    this.apiProductsAllService.get('http://localhost:3001/api/products').subscribe(data => [
+    this.apiProductsAllService.get(`${this.urlSearch}/api/products`).subscribe(data => [
       this.listaProductos=data
     ])
   }
