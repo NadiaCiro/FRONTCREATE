@@ -89,7 +89,7 @@ export class AuthService {
   }
 
   register (user:User): Observable<User>{
-    const urlRegister = `${ this.baseUrl }api/auth/register`;
+    const urlRegister = `${ this.baseUrl }/api/auth/register`;
     const body = { user };
     console.log("dentro del servicio aut register"+body)
     return this.http.post<User>( urlRegister, body )
